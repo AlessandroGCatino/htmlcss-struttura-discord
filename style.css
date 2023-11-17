@@ -8,7 +8,7 @@
 
 :root{
     --myGap: 10px;
-    --headerItems: white;
+    --internalItems: white;
     --headerBgColor: #3161e0;
     --introductionElem: coral;
 }
@@ -28,7 +28,7 @@ header>button,
 header figure{
     width: 100px;
     height: 50px;
-    background-color: var(--headerItems);
+    background-color: var(--internalItems);
 }
 
 nav ul{
@@ -86,11 +86,37 @@ nav ul{
     width: 40%;
 }
 
-.service-description>div:not(:first-child){
+.service-description>div.dettagli{
     display: flex;
     height: 500px;
     width: 80%;
+    align-items: center;
 }
+.dettagli figure{
+    
+    width: 65%;
+    height: 100%;
+    background-color: pink;
+}
+.dettagli div{
+    width: 35%;
+    height: 80%;
+    background-color: yellow;
 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: var(--myGap);
+}
+.dettagli div h1,
+.dettagli div p{
+    height: 100px;
+    width: 80%;
+    background-color: var(--internalItems);
+}
+.dispari{
+    flex-direction: row-reverse;
+}
 
 
