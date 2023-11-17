@@ -10,10 +10,10 @@
     --myGap: 10px;
     --headerItems: white;
     --headerBgColor: #3161e0;
-    --headItemsWidth: 100px;
-    --headItemsHeight: 50px;
+    --introductionElem: coral;
 }
 
+/* formattazione header */
 header{
     display: flex;
     justify-content: space-around;
@@ -21,18 +21,15 @@ header{
     gap: var(--myGap);
     padding-block: 1%;
     background-color: var(--headerBgColor);
-
 }
 
 nav ul li,
-header button,
+header>button,
 header figure{
     width: 100px;
     height: 50px;
     background-color: var(--headerItems);
 }
-
-
 
 nav ul{
     display: flex;
@@ -42,6 +39,57 @@ nav ul{
     align-items: center;
     padding-block: 1%;
     text-transform: capitalize;
+}
+
+/* formattazione main */
+
+.service-description{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.introduction{
+    color:white;
+    width: 100%;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: var(--myGap);
+    /* qui andrebbe l'immagine di sfondo */
+    background-color: var(--headerBgColor);
+}
+.introduction h1,
+.introduction p,
+.introduction div button{
+    background-color: var(--introductionElem);
+}
+.introduction h1{
+    width: 200px;
+    height: 50px;
+}
+.introduction p{
+    width: 350px;
+    height: 100px;
+}
+.download{
+    display: flex;
+    width: 350px;
+    justify-content:space-around;
+    height: 50px;
+    gap: var(--myGap);
+}
+.download button{
+    width: 40%;
+}
+
+.service-description>div:not(:first-child){
+    display: flex;
+    height: 500px;
+    width: 80%;
 }
 
 
