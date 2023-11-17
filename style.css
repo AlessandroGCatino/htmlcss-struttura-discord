@@ -2,15 +2,15 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    border: 1px solid green;
     list-style-type: none;
 }
 
 :root{
     --myGap: 10px;
-    --headerItems: white;
+    --internalItems: white;
     --headerBgColor: #3161e0;
     --introductionElem: coral;
+    --footerBgColor: #23272a;
 }
 
 /* formattazione header */
@@ -23,15 +23,15 @@ header{
     background-color: var(--headerBgColor);
 }
 
-nav ul li,
+nav.menu-header ul li,
 header>button,
 header figure{
     width: 100px;
     height: 50px;
-    background-color: var(--headerItems);
+    background-color: var(--internalItems);
 }
 
-nav ul{
+nav.menu-header ul{
     display: flex;
     gap: var(--myGap);
     flex-grow: 1;
@@ -41,14 +41,7 @@ nav ul{
     text-transform: capitalize;
 }
 
-/* formattazione main */
-
-.service-description{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-}
+/* formattazione introduzione e download */
 
 .introduction{
     color:white;
@@ -62,12 +55,11 @@ nav ul{
     /* qui andrebbe l'immagine di sfondo */
     background-color: var(--headerBgColor);
 }
-.introduction h1,
-.introduction p,
-.introduction div button{
+.introduction h2,
+.introduction p{
     background-color: var(--introductionElem);
 }
-.introduction h1{
+.introduction h2{
     width: 200px;
     height: 50px;
 }
@@ -85,12 +77,102 @@ nav ul{
 .download button{
     width: 40%;
 }
+.download :first-child{
+    background-color:seagreen;
+}
 
-.service-description>div:not(:first-child){
+.download :last-child{
+    background-color:rosybrown;
+}
+
+/* formattazione contenuto principale */
+
+main{
+    display: flex;
+    gap: var(--myGap);
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+main>
+div.dettagli{
     display: flex;
     height: 500px;
     width: 80%;
+    align-items: center;
+}
+.dettagli figure{
+    width: 65%;
+    height: 100%;
+    background-color: pink;
+}
+.dettagli div{
+    width: 35%;
+    height: 80%;
+    background-color: yellow;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: var(--myGap);
+}
+.dettagli div h2,
+.dettagli div p{
+    height: 40%;
+    width: 80%;
+    background-color: var(--internalItems);
+}
+.dispari{
+    flex-direction: row-reverse;
+}
+.large{
+    flex-direction: column;
+    justify-content: center;
+    gap: var(--myGap);
+}
+.large figure{
+    height: 60%;
+}
+.large h2,
+.large p,
+.large h3{
+    height: 8%;
+    width: 65%;
+    text-align: center;
+    background-color: aqua;
+}
+.dettagli button{
+    width: 20%;
+    height: 5%;
+    background-color: coral;
 }
 
+/* formattazione footer */
 
+footer{
+    background-color: var(--footerBgColor);
+    height: 400px;
+    display: flex;
+    padding: 1%;
+    justify-content: space-evenly;
+}
 
+.social{
+    background-color: aquamarine;
+    height: 100%;
+    width: 30%;
+}
+
+.menu-footer{
+    width: 65%;
+    display: flex;
+    justify-content: space-evenly;
+    gap: var(--myGap);
+}
+
+.footer-col{
+    width: calc(100%/4);
+    background-color: silver;
+}
