@@ -1,0 +1,48 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: 1px solid green;
+    list-style-type: none;
+}
+
+:root{
+    --myGap: 10px;
+    --headerItems: white;
+    --headerBgColor: #3161e0;
+    --headItemsWidth: 100px;
+    --headItemsHeight: 50px;
+}
+
+header{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: var(--myGap);
+    padding-block: 1%;
+    background-color: var(--headerBgColor);
+
+}
+
+nav ul li,
+header button,
+header figure{
+    width: 100px;
+    height: 50px;
+    background-color: var(--headerItems);
+}
+
+
+
+nav ul{
+    display: flex;
+    gap: var(--myGap);
+    flex-grow: 1;
+    justify-content: space-around;
+    align-items: center;
+    padding-block: 1%;
+    text-transform: capitalize;
+}
+
+
+
