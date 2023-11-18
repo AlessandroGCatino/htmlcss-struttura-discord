@@ -25,7 +25,9 @@ header{
 
 nav.menu-header ul li,
 header>button,
-header figure{
+header figure,
+.piedipagina figure,
+.piedipagina>button{
     width: 100px;
     height: 50px;
     background-color: var(--internalItems);
@@ -151,7 +153,7 @@ div.dettagli{
 
 /* formattazione footer */
 
-footer{
+footer .footer-links{
     background-color: var(--footerBgColor);
     height: 400px;
     display: flex;
@@ -175,4 +177,15 @@ footer{
 .footer-col{
     width: calc(100%/4);
     background-color: silver;
+}
+
+hr{
+    color: white;
+}
+
+.piedipagina{
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--footerBgColor);
+    padding: 3%;
 }
